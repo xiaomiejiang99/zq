@@ -4,12 +4,127 @@
   "author": "@ztxtop",
   "icon": "https://avatars3.githubusercontent.com/u/52337422?s=460&u=0aa6057c2af304d742d20b3b865c34f2902ad5c1&v=4",
   "repo": "https://github.com/ztxtop",
-  "apps": [{
+  "apps": [{"id":"synckey",
+            "name":"同步cookies到v2p",
+            "keys": ["v2purl", "v2token"],
+            "settings": [{
+        	"id": "v2pcookieupdate",
+        	"name": "同步开关",
+        	"val": false,
+        	"type": "boolean",
+        	"desc": "打开才会上传cookie,用来刚开始使用的时候。"
+      	     }, {
+        	"id": "v2purl",
+       	 	"name": "主页地址",
+        	"val": "",
+        	"type": "text",
+       	 	"desc": "请到设置查询,例子:http://192.168.1.102:12521"
+      	     },
+      	     {
+        	"id": "v2token",
+       	 	"name": "WEBHOOK TOKEN",
+        	"val": "",
+        	"type": "text",
+        	"desc": "请到设置查询,例子:a8c259b2-67fe-D-7bfdf1f55cb3"
+      	     }],
+            "author":"@Cenbomin",
+            "icons":[
+                "https://raw.githubusercontent.com/xiaomiejiang99/zq/main/v2p.png",
+                "https://raw.githubusercontent.com/xiaomiejiang99/zq/main/v2p.png"
+            ],
+            "script":"https://raw.githubusercontent.com/xiaomiejiang99/zq/main/sync_key.js"
+    },
+    {"id":"syncql",
+            "name":"同步青龙",
+            "keys":[
+                "ql_host",
+                "ql_app_id",
+                "ql_secret_key",
+                "sync_ql_key",
+                "sync_ql_remark"
+            ],
+            "settings": [
+            {
+                "id": "ql_host",
+                "name": "青龙访问地址",
+                "val": "http://127.0.0.1:5700",
+                "type": "text",
+                "desc": "填写青龙的访问地址"
+            },
+            {
+                "id": "ql_app_id",
+                "name": "青龙授权id",
+                "val": "",
+                "type": "text",
+                "desc": "填写青龙的第三方授权id"
+            },
+            {
+                "id": "ql_secret_key",
+                "name": "青龙授权秘钥",
+                "val": "",
+                "type": "text",
+                "desc": "填写青龙的第三方授权秘钥"
+            },
+            {
+                "id": "sync_ql_key",
+                "name": "青龙变量名",
+                "val": "",
+                "type": "selects",
+                "items":[
+                    {"key":"zqkdapp","label":"中青看点"},
+                    {"key":"sjbapp","label":"睡觉宝"},
+                    {"key":"fdxsapp","label":"疯读小说"},
+                    {"key":"txsapp","label":"淘小说"},
+                    {"key":"zssqapp","label":"追书神器"},
+                    {"key":"qttapp","label":"趣头条"},
+                    {"key":"dyhsbapp","label":"抖音火山版"},
+                    {"key":"jyapp","label":"剪映"},
+                    {"key":"qdapp","label":"签到合集"},
+                    {"key":"jkttapp","label":"健康头条"},
+                    {"key":"kyapp","label":"快音"},
+                    {"key":"gjzzapp","label":"赶集直招"},
+                    {"key":"httapp","label":"惠头条"},
+                    {"key":"lehoapp","label":"乐活"},
+                    {"key":"xclyapp","label":"携程旅游"},
+                    {"key":"fyysapp","label":"枫以视频"},
+                    {"key":"wbdtapp","label":"文博答题"},
+                    {"key":"zhrlapp","label":"中华日历"},
+                    {"key":"cllapp","label":"长拉拉"},
+                    {"key":"gqcqapp","label":"广汽传祺"},
+                    {"key":"gylmapp","label":"高佣联盟"},
+                    {"key":"bjfbapp","label":"滨江发布"},
+                    {"key":"kjgzzapp","label":"科技工作者"},
+                    {"key":"xyymapp","label":"新氧医美"},
+                    {"key":"xpgoapp","label":"西皮购"},
+                    {"key":"jcyapp","label":"金彩云"},
+                    {"key":"jhshapp","label":"建行生活"},
+                    {"key":"douzapp","label":"嘟赞"},
+                    {"key":"xhnapp","label":"新湖南"}
+                ],
+                "desc": "选择需要同步的APP"
+            },
+            {
+                "id": "sync_ql_remark",
+                "name": "青龙变量备注",
+                "val": "",
+                "type": "text",
+                "desc": "填写需要同步的变量备注信息"
+            }
+            ],
+            "author":"@David",
+            "repo":"https://t.me/DavidLoveBot",
+            "icons":[
+                "https://raw.githubusercontent.com/xiaomiejiang99/zq/main/ql.png",
+                "https://raw.githubusercontent.com/xiaomiejiang99/zq/main/ql.png"
+            ],
+            "script":"https://raw.githubusercontent.com/xiaomiejiang99/zq/main/sync_ql.js"
+    },
+    {
       "id": "youthCk",
       "name": "中青数据",
       "keys": ["youthheader_zq", "read_zq", "readtime_zq", "youthheader_zq2", "read_zq2", "readtime_zq2", "youthheader_zq3", "read_zq3", "readtime_zq3", "youthheader_zq4", "read_zq4", "readtime_zq4"],
       "descs_html": [
-        "多账号脚本地址【<a href=\"https://raw.githubusercontent.com/ztxtop/x/main/youth.js\">中青看点极速版</a>】",
+        "多账号脚本地址【<a href=\"https://raw.githubusercontent.com/xiaomiejiang99/zq/refs/heads/main/youth.js\">中青看点极速版</a>】",
         "中青多账号ck抓取步骤：",
         "1、boxjs中指定抓包账号，如：2",
         "2、NE工具订阅配置【<a href=\"https://raw.githubusercontent.com/ztxtop/x/main/rewrite-zq.plugin\">中青看点</a>】【<a href=\"https://raw.githubusercontent.com/ztxtop/x/main/rewrite-zqkkz.plugin\">中青看看赚、浏览赚</a>】",
