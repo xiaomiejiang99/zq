@@ -38,15 +38,15 @@
         "type": "text",
         "desc": "设置中青的执行账号，多个账号用半角逗号分隔，如：1,2,4"
       }],
-      "repo": "https://github.com/ztxtop/x/blob/main/youth.js",
+      "repo": "https://raw.githubusercontent.com/xiaomiejiang99/zq/refs/heads/main/youth.js",
       "icons": ["https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/youth.png", "https://raw.githubusercontent.com/Orz-3/mini/master/Color/youth.png"],
-      "script": "https://raw.githubusercontent.com/ztxtop/x/main/youth.js"
+      "script": "https://raw.githubusercontent.com/xiaomiejiang99/zq/refs/heads/main/youth.js"
     },
     {
       "id": "youthNeRead",
       "name": "中青阅读",
       "descs_html": [
-        "中青阅读脚本地址【<a href=\"https://raw.githubusercontent.com/ztxtop/x/main/zqread.js\">中青阅读</a>】",
+        "中青阅读脚本地址【<a href=\"https://raw.githubusercontent.com/xiaomiejiang99/zq/refs/heads/main/zqread.js\">中青阅读</a>】",
         "注意：因此脚本使用的阅读数据存储位置与songyangzz大佬的不同，所以需搭配【<a href=\"https://raw.githubusercontent.com/ztxtop/x/main/rewrite-zqread.plugin\">阅读数据抓包订阅</a>】抓取的阅读数据使用"
       ],
       "author": "@ztxtop",
@@ -103,12 +103,12 @@
         "type": "number",
         "desc": "账号4阅读数据总行数"
       }],
-      "repo": "https://github.com/ztxtop/x/blob/main/zqread.js",
+      "repo": "https://raw.githubusercontent.com/xiaomiejiang99/zq/refs/heads/main/zqread.js",
       "icons": ["https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/youth.png", "https://raw.githubusercontent.com/Orz-3/mini/master/Color/youth.png"],
       "script": "https://raw.githubusercontent.com/ztxtop/x/main/youth.js",
       "scripts": [{
         "name": "自动阅读",
-        "script": "https://raw.githubusercontent.com/ztxtop/x/main/zqread.js"
+        "script": "https://raw.githubusercontent.com/xiaomiejiang99/zq/refs/heads/main/zqread.js"
       }]
     },
     {
