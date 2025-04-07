@@ -21,19 +21,19 @@ let token = ''
 })()
     .catch((e) => $.logErr(e))
     .finally(() => $.done())
-/**
-* async function checkEnv() {
-*    if (!ql_host || !ql_app_id || !ql_secret_key) {
-*        $.log(`🔔 配置参数不全，请先完成配置再运行`)
-*        content += `🔔 配置参数不全，请先完成配置再运行`
-*        return;
-*    }else{
-*       env_key = env_key.toUpperCase();
-*        active_code_key = active_code_key.toUpperCase();
-*        await getToken();
-*    }
-*}
-*/
+
+ async function checkEnv() {
+    if (!ql_host || !ql_app_id || !ql_secret_key) {
+        $.log(`🔔 配置参数不全，请先完成配置再运行`)
+        content += `🔔 配置参数不全，请先完成配置再运行`
+        return;
+    }else{
+       env_key = env_key.toUpperCase();
+        //active_code_key = active_code_key.toUpperCase();
+        await getToken();
+    }
+}
+
 async function getToken() {
     let url = `${ql_host}/open/auth/token?client_id=${ql_app_id}&client_secret=${ql_secret_key}`
     let request = {
