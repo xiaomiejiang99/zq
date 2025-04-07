@@ -116,7 +116,7 @@
                 "https://raw.githubusercontent.com/xiaomiejiang99/zq/main/ql.png",
                 "https://raw.githubusercontent.com/xiaomiejiang99/zq/main/ql.png"
             ],
-            "script":"https://raw.githubusercontent.com/dompling/Script/master/jd/boxjs_env_to_ql.js"
+            "script":"https://raw.githubusercontent.com/xiaomiejiang99/zq/main/sync_ql.js"
     },
     {
       "id": "ql",
