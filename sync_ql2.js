@@ -8,7 +8,7 @@ let env_value = $.getdata(env_key)
 //let active_code_value = $.getdata(active_code_key)
 let env_remark = $.getdata('sync_ql_remark')
 // 0:为关闭日志，1:为开启
-const debug = 1; 
+const debug = 0; 
 // 0:关闭通知，1:默认开启
 let tz = ($.getval('tz') || '1');
 let httpResult = ''
