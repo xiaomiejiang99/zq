@@ -25,10 +25,6 @@ async function checkEnv() {
         $.log(`🔔 配置参数不全，请先完成配置再运行`)
         content += `🔔 配置参数不全，请先完成配置再运行`
         return;
-    }else{
-        env_key = env_key.toUpperCase();
-        active_code_key = active_code_key.toUpperCase();
-        await getToken();
     }
 }
 
