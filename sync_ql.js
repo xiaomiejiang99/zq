@@ -4,8 +4,6 @@ let ql_app_id = $.getdata('ql_app_id')
 let ql_secret_key = $.getdata('ql_secret_key')
 let env_key = $.getdata('sync_ql_key')
 let env_value = $.getdata(env_key)
-let active_code_key = env_key.split("app")[0]+'activecode'
-let active_code_value = $.getdata(active_code_key)
 let env_remark = $.getdata('sync_ql_remark')
 // 0:为关闭日志，1:为开启
 const debug = 0; 
