@@ -4,11 +4,11 @@ let ql_app_id = $.getdata('ql_app_id')
 let ql_secret_key = $.getdata('ql_secret_key')
 let env_key = $.getdata('sync_ql_key')
 let env_value = $.getdata(env_key)
-let active_code_key = env_key.split("app")[0]+'activecode'
-let active_code_value = $.getdata(active_code_key)
+//let active_code_key = env_key.split("app")[0]+'activecode'
+//let active_code_value = $.getdata(active_code_key)
 let env_remark = $.getdata('sync_ql_remark')
 // 0:为关闭日志，1:为开启
-const debug = 0; 
+const debug = 1; 
 // 0:关闭通知，1:默认开启
 let tz = ($.getval('tz') || '1');
 let httpResult = ''
@@ -21,19 +21,19 @@ let token = ''
 })()
     .catch((e) => $.logErr(e))
     .finally(() => $.done())
-
-async function checkEnv() {
-    if (!ql_host || !ql_app_id || !ql_secret_key) {
-        $.log(`🔔 配置参数不全，请先完成配置再运行`)
-        content += `🔔 配置参数不全，请先完成配置再运行`
-        return;
-    }else{
-        env_key = env_key.toUpperCase();
-        active_code_key = active_code_key.toUpperCase();
-        await getToken();
-    }
-}
-
+/**
+* async function checkEnv() {
+*    if (!ql_host || !ql_app_id || !ql_secret_key) {
+*        $.log(`🔔 配置参数不全，请先完成配置再运行`)
+*        content += `🔔 配置参数不全，请先完成配置再运行`
+*        return;
+*    }else{
+*       env_key = env_key.toUpperCase();
+*        active_code_key = active_code_key.toUpperCase();
+*        await getToken();
+*    }
+*}
+*/
 async function getToken() {
     let url = `${ql_host}/open/auth/token?client_id=${ql_app_id}&client_secret=${ql_secret_key}`
     let request = {
@@ -50,12 +50,14 @@ async function getToken() {
             $.log(`📢 新增变量: ${env_key}没有初始化，请先完成抓取或者设置后，再同步`)
             content += `新增变量: ${env_key}没有初始化，请先完成抓取或者设置后，再同步 \n`
         }
-        if(active_code_value) {
-            await search(active_code_key, active_code_value);
-        }else{
-            $.log(`📢 新增变量: ${active_code_key}没有初始化，请先完成抓取或者设置后，再同步`)
-            content += `新增变量: ${active_code_key}没有初始化，请先完成抓取或者设置后，再同步 \n`
-        }
+   /**     
+   *     if(active_code_value) {
+   *         await search(active_code_key, active_code_value);
+   *    }else{
+   *         $.log(`📢 新增变量: ${active_code_key}没有初始化，请先完成抓取或者设置后，再同步`)
+   *         content += `新增变量: ${active_code_key}没有初始化，请先完成抓取或者设置后，再同步 \n`
+   *     }
+   */
     } else {
         $.log(`获取Token失败: ${result.message}`)
         content += `获取Token失败: ${result.message} \n`
